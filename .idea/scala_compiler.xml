@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="scalajs_3138,plugins_6793,scalajs_8821,server,root" />
+    <profile name="sbt 2" modules="clientStories-client,client.fixture,clientApp">
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.7/jars/scalajs-compiler_2.12.7-0.6.25.jar" />
+      </plugins>
+    </profile>
+    <profile name="sbt 3" modules="sbt-pipeline">
+      <option name="deprecationWarnings" value="true" />
+    </profile>
+    <profile name="sbt 4" modules="client,clientStories">
+      <parameters>
+        <parameter value="-P:scalajs:sjsDefinedByDefault" />
+      </parameters>
+      <plugins>
+        <plugin path="$USER_HOME$/.ivy2/cache/org.scala-js/scalajs-compiler_2.12.7/jars/scalajs-compiler_2.12.7-0.6.25.jar" />
+      </plugins>
+    </profile>
+  </component>
+</project>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.scala-js:closure-compiler-java-6:v20160517:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-js/closure-compiler-java-6/jars/closure-compiler-java-6-v20160517.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-js/closure-compiler-java-6/srcs/closure-compiler-java-6-v20160517-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
