@@ -1,16 +1,12 @@
 package lab.components
 
-import japgolly.scalajs.react.ScalaFnComponent
 import japgolly.scalajs.react.vdom.html_<^._
-import lab.facades.React.{useEffect, useState}
+import japgolly.scalajs.react.{ScalaFnComponent, raw}
+import lab.lib.react.ReactFacade._
 
 import scala.scalajs.js
 import scala.scalajs.js.Date
-import scala.scalajs.js.special.debugger
 import scala.scalajs.js.timers.{clearTimeout, setTimeout}
-import japgolly.scalajs.react.raw
-
-import scala.scalajs.js.annotation.JSExportTopLevel
 
 object StatelessComponent {
 
@@ -18,7 +14,7 @@ object StatelessComponent {
     val content: String
   }
 
-  implicit class ComponentProps(val content:String) extends Props {
+  implicit class ComponentProps(val content: String) extends Props {
 
   }
 
@@ -40,7 +36,9 @@ object StatelessComponent {
     )
   })
 
-  def render(props: Props): raw.React.Element = component(props).raw
+  def render(props: Props): raw.React.Element = {
+    component(props).raw
+  }
 
   js.constructorOf[scalajs.js.Object](component.raw).displayName = "StateLess"
 }

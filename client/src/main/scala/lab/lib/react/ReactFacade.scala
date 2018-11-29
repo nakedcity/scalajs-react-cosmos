@@ -1,10 +1,10 @@
-package lab.facades
+package lab.lib.react
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 
 
-object React extends Object {
+object ReactFacade extends Object {
 
   @JSImport("react", JSImport.Namespace)
   @js.native
@@ -14,12 +14,12 @@ object React extends Object {
     def useEffect(default: js.Function0[Unit]): Unit = js.native
   }
 
-  def useState[T](default: T) = {
+  def useState[T](default: T): (T, js.Function1[T, Unit]) = {
     val call = ReactJS.useState(default)
     (call._1, call._2)
   }
 
-  def useEffect(default: () => Unit) = {
+  def useEffect(default: () => Unit): Unit = {
     ReactJS.useEffect(default)
   }
 }

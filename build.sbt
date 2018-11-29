@@ -51,7 +51,7 @@ lazy val commonClientSettings = Seq(
     copyAssets := {
       val sourceDir: File = baseDirectory.value / "assets"
       val targetDir: File = target.value / ("scala-" + scalaBinaryVersion.value) / "scalajs-bundler" / "main"
-      copyDirectory(sourceDir, targetDir, true)
+      copyDirectory(sourceDir, targetDir, overwrite = true)
     }
   },
 
@@ -66,7 +66,7 @@ lazy val commonClientSettings = Seq(
   //    webpackBundlingMode in fastOptJS := BundlingMode.LibraryAndApplication(),
 
   (startWebpackDevServer in fastOptJS in Compile) := ((startWebpackDevServer in fastOptJS in Compile)
-    dependsOn (dev)
+    dependsOn dev
     ).value,
 
   webpackConfigFile in fastOptJS := Some(baseDirectory.value / "dev.config.js"),
@@ -100,8 +100,8 @@ lazy val commonClientSettings = Seq(
   version in startWebpackDevServer := "3.1.10",
   //    topLevelDirectory := None,
 
-  (fastOptJS in Compile) := ((fastOptJS in Compile) dependsOn (copyAssets)).value,
-  (fullOptJS in Compile) := ((fullOptJS in Compile) dependsOn (copyAssets)).value
+  (fastOptJS in Compile) := ((fastOptJS in Compile) dependsOn copyAssets).value,
+  (fullOptJS in Compile) := ((fullOptJS in Compile) dependsOn copyAssets).value
 )
 
 
