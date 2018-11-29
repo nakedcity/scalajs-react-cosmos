@@ -15,12 +15,10 @@ object AppContainer {
   }
 
   def clickHandler(e: ReactMouseEvent): Callback = {
-    console.log("Hey!", e)
     Callback.empty
   }
 
   private def mainComponent() = {
-
     <.div(
       ^.className := "app",
       ^.onClick ==> clickHandler,

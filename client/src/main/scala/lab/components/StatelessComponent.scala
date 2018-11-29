@@ -1,7 +1,8 @@
 package lab.components
 
+import japgolly.scalajs.react.component.ScalaFn.Component
 import japgolly.scalajs.react.vdom.html_<^._
-import japgolly.scalajs.react.{ScalaFnComponent, raw}
+import japgolly.scalajs.react.{CtorType, ScalaFnComponent, raw}
 import lab.lib.react.ReactFacade._
 
 import scala.scalajs.js
