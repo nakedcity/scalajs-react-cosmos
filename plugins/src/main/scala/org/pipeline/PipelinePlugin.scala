@@ -31,8 +31,6 @@ object PipelinePlugin extends AutoPlugin {
         fastOptJS in Compile
       }.value
 
-      println(js.data.getParent.getParent)
-
       val jsOutputDirectory = js.data.getParent
 
       // Prepare the directory for local scala.js source files
